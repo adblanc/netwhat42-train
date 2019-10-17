@@ -1,0 +1,18 @@
+Parmi les propositions suivantes, laquelle est la plage d'hotes valide pour le sous-reseau sur lequel l'adresse IP 158.167.18.156/15 reside ?
+Si l'adresse IP 123.48.189.194/21 est attribuee a un port Ethernet d'un routeur, quelle addresse d'hote pourrait communiquer avec lui?
+Laquelle des propositions suivantes est une adresse IP privee?
+Quelle est l'addresse reseau d'un hote avec une addresse IP de 182.161.121.118/24?
+Quel est le nombre maximal d'adresses IP pouvant etre attribuees aux hotes d'un sous-reseau local utilisant le masque de sous-reseau 255.255.128.0 ?
+Vous souhaitez implementer un mecanisme qui automatise la configuration IP, y compris l'adresse IP, le masque de sous-reseau, la passerelle par defaut et les informations DNS. Quel protocole utiliserez-vous pour y parvenir?
+Vous avez une interface sur un routeur avec l'adresse IP de 124.144.156.248/21. L'interface du routeur comprise, combien d'hotes peuvent avoir des adresses IP sur le reseau local connectees a l'interface du routeur?
+Parmi les propositions suivantes, laquelle est la plage d'hote valide pour le sous-reseau sur lequel l'adresse IP 1.93.149.6/17 reside?
+Quelle est l'adresse reseau d'un hote avec une adresse IP de 107.212.146.212/25?
+Parmi les propositions suivantes, laquelle est la plage d'hotes valide pour le sous-reseau sur lequel l'adresse IP 233.249.146.36/21 reside?
+Laquelle des propositions suivantes n'est pas vraie ?
+Quelle est l'adresse reseaux d'un hote avec une adresse IP de 166.175.144.121/23?
+Quel est le nombre maximal d'adresses IP pouvant etre attribuees aux hotes d'un sous-reseau local utilisant le masque de sous-reseau 255.255.255.128 ?
+Quel est le nombre maximal d'adresses IP pouvant etre attribuees aux hotes d'un sous-reseau local utilisant le masque de sous-reseau 255.224.0.0 ?
+Laquelle des propositions suivantes est une adresse IP privee ?
+Quel protocole DHCP utilise-t-il au niveau de la couche transport ?
+Vous avez une interface sur un routeur avec l'adresse IP  de 240.19.3.205/12. L'interface du routeur comprise, combien d'hotes peuvent avoir des adresses IP sur le reseau local conectees a l'interface du routeur ?
+
