@@ -1,8 +1,7 @@
 #!/bin/bash
 path_q="srcs/questions.txt"
 path_answ="srcs/answers/"
-questions_nbr=17
-let "step = 1"
+let "questions_nbr = 17"
 
 bold=`tput bold`
 underline=`tput smul`
@@ -77,6 +76,8 @@ function select_opt {
     return $result
 }
 
+let "step = 1"
+let "count = 0"
 while [ $step -le $questions_nbr ]
 	do
 		responses=()
@@ -90,9 +91,18 @@ while [ $step -le $questions_nbr ]
 				let "j = j + 1"
 			done < "$path_answ$step.txt"
 		case `select_opt "${responses[@]}"` in
-			${answers["$step - 1"]}) echo -e "${green}Bonne reponse !\n\n${reset}";;
+			${answers["$step - 1"]})
+			echo -e "${green}Bonne reponse !\n\n${reset}"
+			let "count = $count + 1"
+			;;
     			*) echo -e "${red}Mauvaise reponse !\n\n${reset}";;
 		esac
 		unset responses
 		let "step = step + 1"
 	done
+if [ $count -ge $questions_nbr ]
+then
+	echo "${underline}${bold}Score final :${reset} ${bold}${green}${count}/${questions_nbr}"
+else
+	echo "${underline}${bold}Score final :${reset} ${bold}${red}${count}/${questions_nbr}"
+fi
