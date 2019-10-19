@@ -1,5 +1,5 @@
 # netwhat42.sh
-Nombre de questions actuellement : 17.<br/><br/>
+Nombre de questions actuellement : 23.<br/><br/>
 Pour lancer le script :<br/>
 ./netwhat42<br/><br/>
 Utilisez les flèches directionnelles et la touche entrée pour repondre aux questions.<br/>
