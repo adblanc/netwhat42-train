@@ -15,4 +15,9 @@ Quel est le nombre maximal d'adresses IP pouvant etre attribuees aux hotes d'un 
 Laquelle des propositions suivantes est une adresse IP privee ?
 Quel protocole DHCP utilise-t-il au niveau de la couche transport ?
 Vous avez une interface sur un routeur avec l'adresse IP  de 240.19.3.205/12. L'interface du routeur comprise, combien d'hotes peuvent avoir des adresses IP sur le reseau local conectees a l'interface du routeur ?
-
+Quelle est l'adresse broadcast d'un hote avec une adresse IP de 51.254.122.100/24 ?
+Quelle est la notation CIDR du masque de sous reseau 255.255.128.0 ?
+Quelle est la notation CIDR du masque de sous reseau 255.255.192.0 ?
+Quelles sont les differentes couches du model OSI ?
+Quelle est l'adresse reseau d'un hote avec une adresse ip de 116.45.224.50/8 ?
+Quelle est l'adresse reseau d'un hote avec une adresse IP de 45.195.37.187/16?
