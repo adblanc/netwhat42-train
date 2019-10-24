@@ -1,0 +1,4 @@
+Application - Presentation - Session - Transport - Network - Liaison - Physics
+Application - Mediation - Session - Transport - Network - Liaison - Physics
+Presentation - Session - Transport - Network - Liaison - Application - Real
+Relation - Transport - Session - Liaison - Mediation - Presentation - Application

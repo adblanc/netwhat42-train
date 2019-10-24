@@ -1,15 +1,26 @@
 #!/bin/bash
-path_q="srcs/questions.txt"
-path_answ="srcs/answers/"
-let "questions_nbr = 23"
 
+let "questions_nbr = 35"
+
+
+# Terminal styles...
 bold=`tput bold`
 underline=`tput smul`
+black=`tput setaf 0`
 red=`tput setaf 1`
+yellow=`tput setaf 3`
 green=`tput setaf 2`
+blue=`tput setaf 4`
+magenta=`tput setaf 5`
 reset=`tput sgr0`
+bell=`tput bel`
 
-answers=('2' '6' '1' '7' '6' '1' '4' '3' '5' '2' '0' '1' '2' '7' '0' '3' '2' '3' '3' '2' '0' '1' '3')
+langs=("fr" "en")
+current_lang=langs[0]
+
+path_q="srcs/${current_lang}/questions.txt"
+path_answ="srcs/${current_lang}/answers/"
+path_responses="srcs/responses.txt"
 
 function select_option {
 
@@ -76,26 +87,97 @@ function select_opt {
     return $result
 }
 
+containsElement () {
+  local e match="$1"
+  shift
+  for e; do [[ "$e" == "$match" ]] && return 0; done
+  return 1
+}
+
+
+passed_questions=()
+
+# This function takes as an argument the upper limit ie. questions_nbr here
+# We increate random_nbr by one after the modulo in order to get the upper limit question
+# as we use %.
+
+function pick_random_max() {
+    local random_nbr=$RANDOM
+    let "random_nbr %= $1"
+    let "random_nbr = random_nbr + 1"
+    containsElement $random_nbr "${passed_questions[@]}"
+    while [ $? == 0 ]
+        do
+        random_nbr=$RANDOM
+        let "random_nbr %= $1"
+        let "random_nbr = random_nbr + 1"
+        containsElement $random_nbr "${passed_questions[@]}"
+        done
+    passed_questions+=($random_nbr)
+    return $random_nbr
+}
+
+function set_phrases_lang() {
+    if [ $current_lang == "en" ]
+    then
+    good_answer="Good answer !"
+    bad_answer="Wrong answer !"
+    answer_was="The right answer was:"
+    final_score="Final score :"
+    else
+    good_answer="Bonne reponse !"
+    bad_answer="Mauvaise reponse !"
+    answer_was="La bonne reponse etait :"
+    final_score="Score final :"
+    fi
+}
+
+function set_lang() {
+    echo -e "${bell}${underline}${bold}${yellow}Please select the language / Veuillez choisir la langue\n${reset}"
+    case `select_opt "${langs[@]}"` in
+    *)
+    current_lang=${langs[$?]}
+    ;;
+    esac
+    path_q="srcs/${current_lang}/questions.txt"
+    path_answ="srcs/${current_lang}/answers/"
+    set_phrases_lang
+}
+
+function display_question_nbr() {
+    echo -e "${bold}${underline}${magenta}${questions_nbr} questions\n${reset}${yellow}${bold}${underline}"
+}
+
+display_question_nbr
+set_lang
+
 let "step = 1"
 let "count = 0"
 while [ $step -le $questions_nbr ]
 	do
+        pick_random_max $questions_nbr
+        random=$?
 		responses=()
 		let "j = 0"
-		echo -e "${bold}${underline}Question $step\n"
-		tail -n+$step $path_q | head -n1
+		echo -e "${bold}${underline}${blue}Question $step\n${reset}${yellow}${bold}${underline}"
+		tail -n+$random $path_q | head -n1
 		echo -e "\n${reset}"
 		while IFS= read -r line
 			do
   				responses[$j]=$line
 				let "j = j + 1"
-			done < "$path_answ$step.txt"
+			done < "$path_answ$random.txt"
+        response_nbr=`head -"$random" $path_responses | tail -1`
+        let "index_opt_menu = $response_nbr - 1"
 		case `select_opt "${responses[@]}"` in
-			${answers["$step - 1"]})
-			echo -e "${green}Bonne reponse !\n\n${reset}"
+			$index_opt_menu)
+			echo -e "${underline}${bold}${green}${good_answer}\n\n${reset}"
 			let "count = $count + 1"
 			;;
-    			*) echo -e "${red}Mauvaise reponse !\n\n${reset}";;
+    		*)
+            echo -e "${bell}${underline}${bold}${red}${bad_answer}\n\n${reset}"
+            echo -e "${underline}${bold}${answer_was}${reset}${bold}${green} ${responses[$index_opt_menu]}${reset}\n"
+            ;;
 		esac
 		unset responses
 		let "step = step + 1"
