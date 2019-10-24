@@ -14,4 +14,4 @@ To launch the script: <br/>
 Use the directional arrows and the enter key to answer the questions. <br/>
 The MCQ is valid only if all questions are correct.
 
-![Screenshot question](https://i.imgur.com/KfOszdZ.png)
+![Screenshot question](https://i.imgur.com/y2WvYOw.png)
