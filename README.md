@@ -1,4 +1,4 @@
-# netwhat42
+# netwhat42-train
 
 Nombre de questions actuellement : 35.<br/><br/>
 Pour lancer le script :<br/>
