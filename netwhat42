@@ -1,6 +1,7 @@
 #!/bin/bash
 
-let "questions_nbr = 35"
+
+questions_nbr=${1:-35}
 
 
 # Terminal styles...
@@ -14,6 +15,12 @@ blue=`tput setaf 4`
 magenta=`tput setaf 5`
 reset=`tput sgr0`
 bell=`tput bel`
+
+if [ $questions_nbr -lt 1 ]
+then
+    echo "${bold}${red}${underline}Please enter a valid number ( > 0 )"
+    exit 1
+fi
 
 langs=("fr" "en")
 current_lang=langs[0]
