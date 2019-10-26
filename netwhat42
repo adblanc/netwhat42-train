@@ -1,7 +1,9 @@
 #!/bin/bash
 
+max_questions=35
 
-questions_nbr=${1:-35}
+
+questions_nbr=${1:-$max_questions}
 
 
 # Terminal styles...
@@ -18,7 +20,11 @@ bell=`tput bel`
 
 if [ $questions_nbr -lt 1 ]
 then
-    echo "${bold}${red}${underline}Please enter a valid number ( > 0 )"
+    echo "${bold}${red}${underline}Please enter a valid number ( > 0 && <= $max_questions )"
+    exit 1
+elif [ $questions_nbr -gt $max_questions ]
+then
+    echo "${bold}${red}${underline}Please enter a valid number ( > 0 && <= $max_questions )"
     exit 1
 fi
 
