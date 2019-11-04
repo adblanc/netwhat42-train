@@ -33,3 +33,4 @@ Parmi les adresses IP suivantes, laquelle est une adresse privee ?
 Quelle est la taille d'une adresse IPV4 ?
 Quelle est la taille d'une adresse IPV6 ?
 Quelle type d'adresse est pris en charge par DHCP ?
+Quel protocole utilise Ping?

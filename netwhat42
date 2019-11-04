@@ -1,6 +1,6 @@
 #!/bin/bash
 
-max_questions=35
+max_questions=36
 
 
 questions_nbr=${1:-$max_questions}
