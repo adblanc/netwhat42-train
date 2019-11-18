@@ -34,3 +34,4 @@ What is the size of an IPV4 address?
 What is the size of an IPV6 address?
 What type of address is supported by DHCP?
 Which protocol does Ping use?
+Which of the following propositions is not true?
