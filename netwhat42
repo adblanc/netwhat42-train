@@ -28,7 +28,7 @@ then
     exit 1
 fi
 
-langs=("fr" "en")
+langs=("fr" "en" "es")
 current_lang=langs[0]
 
 path_q="srcs/${current_lang}/questions.txt"
@@ -135,8 +135,14 @@ function set_phrases_lang() {
     then
     good_answer="Good answer !"
     bad_answer="Wrong answer !"
-    answer_was="The right answer was:"
+    answer_was="The right answer was :"
     final_score="Final score :"
+    elif [ $current_lang == "es" ]
+    then
+    good_answer="Buena respuesta !"
+    bad_answer="Respuesta incorrecta !"
+    answer_was="La respuesta correcta fue :"
+    final_score="Resultado final :"
     else
     good_answer="Bonne reponse !"
     bad_answer="Mauvaise reponse !"
@@ -146,7 +152,7 @@ function set_phrases_lang() {
 }
 
 function set_lang() {
-    echo -e "${bell}${underline}${bold}${yellow}Please select the language / Veuillez choisir la langue\n${reset}"
+    echo -e "${bell}${underline}${bold}${yellow}Please select the language / Veuillez choisir la langue / Por favor, elige un idioma\n${reset}"
     case `select_opt "${langs[@]}"` in
     *)
     current_lang=${langs[$?]}

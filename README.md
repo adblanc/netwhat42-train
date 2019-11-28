@@ -14,4 +14,13 @@ To launch the script: <br/>
 Use the directional arrows and the enter key to answer the questions. <br/>
 The MCQ is valid only if all questions are correct.
 
+---------------------------------------------------------------------------------
+
+Para iniciar el script: <br/>
+./netwhat42 [número]<br/><br/>
+Utilice las flechas de dirección y la tecla enter para responder a las preguntas. <br/>
+El MCQ es válido sólo si todas las preguntas son correctas.
+
+Thanks to @bazuara (bazuara@student.42madrid.com) for the spanish translation.
+
 ![Screenshot question](https://i.imgur.com/y2WvYOw.png)
