@@ -146,9 +146,9 @@ function set_phrases_lang() {
     elif [ $current_lang == "ru" ]
     then
     good_answer="Хороший ответ !"
-    bad_answer="Неправильный ответ !"
+    bad_answer="Правильный ответ !"
     answer_was="Правильный ответ был :"
-    final_score="Окончательный счет :"
+    final_score="Результат :"
     else
     good_answer="Bonne réponse !"
     bad_answer="Mauvaise réponse !"
