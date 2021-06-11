@@ -15,7 +15,7 @@ Tiene una interfaz en un enrutador con la dirección IP 124.144.156.248/21. Incl
 ¿Cuál de las siguientes propuestas es una dirección IP privada?
 ¿Qué protocolo DHCP utiliza en el nivel de la capa de transporte?
 Tiene una interfaz en un enrutador con la dirección IP 240.19.3.205/12. Incluyendo la interfaz del enrutador, ¿cuántos hosts pueden tener direcciones IP en la red local conectadas a la interfaz del enrutador?
-¿Cuál es la dirección de transmisión de un host con una dirección IP de 51,254,122,100 / 24?
+¿Cuál es la dirección de transmisión de un host con una dirección IP de 51.254.122.100 / 24?
 ¿Cuál es la notación CIDR de la máscara de subred 255.255.128.0?
 ¿Cuál es la notación CIDR de la máscara de subred 255.255.192.0?
 ¿Cuáles son las diferentes capas del modelo OSI?
