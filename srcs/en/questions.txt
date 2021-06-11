@@ -15,7 +15,7 @@ What is the maximum number of IP addresses that can be assigned to hosts on a lo
 Which of the following proposals is a private IP address?
 What DHCP protocol does it use at the transport layer level?
 You have an interface on a router with the IP address of 240.19.3.205/12. Including the router interface, how many hosts can have IP addresses on the local network connected to the router interface?
-What is the broadcast address of a host with an IP address of 51,254,122,100/24?
+What is the broadcast address of a host with an IP address of 51.254.122.100/24?
 What is the CIDR notation of the 255.255.128.0 subnet mask?
 What is the CIDR notation of the 255.255.192.0 subnet mask?
 What are the different layers of the OSI model?
